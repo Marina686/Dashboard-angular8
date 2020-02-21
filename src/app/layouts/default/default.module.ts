@@ -6,6 +6,9 @@ import { RouterModule } from '@angular/router';
 import { PostsComponent } from 'src/app/modules/posts/posts.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatDividerModule, MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardService } from 'src/app/modules/dashboard.service';
 
 
 @NgModule({
@@ -18,7 +21,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CommonModule,
     RouterModule,
     SharedModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDividerModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatTableModule
+  ],
+  providers: [
+    DashboardService
   ]
 })
 export class DefaultModule { }
